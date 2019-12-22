@@ -1,0 +1,40 @@
+
+
+#paneListView{
+    -fx-background-color: #8fbc8f;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 1px;
+
+}
+
+#paneopcje{
+    -fx-background-color: #8ccc8f;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 1px;
+}
+
+#panedodawanie{
+    -fx-background-color: #8fbc8f;
+    -fx-border-color: #2e8b57;
+    -fx-border-width: 1px;
+}
+
+#buttonkopiazapasowa{
+     -fx-background-radius: 10;
+        -fx-background-insets: 5 10 5 10;
+   }
+
+#buttondomyslna{
+    -fx-background-radius: 10;
+    -fx-background-insets: 5 10 5 10;
+}
+
+#buttonczyscbaze{
+     -fx-background-radius: 10;
+        -fx-background-insets: 5 10 5 10;
+}
+
+#buttonhelp{
+    -fx-background-radius: 10;
+       -fx-background-insets: 5 10 5 10;
+}

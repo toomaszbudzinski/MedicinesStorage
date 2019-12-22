@@ -1,0 +1,23 @@
+package sample;
+
+
+public class SQLCommand {
+
+    public static String createDatabase="CREATE DATABASE IF NOT EXISTS projektMed;";
+
+    public static String createBaseLeki="DROP TABLE IF EXISTS `leki`;";
+    public static String createBaseLeki2="CREATE TABLE `leki` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `name` varchar(20) DEFAULT NULL,  `ean1` bigint(33) DEFAULT NULL,  `ean2` bigint(33) DEFAULT NULL,  `ean3` bigint(33) DEFAULT NULL,  `ean4` bigint(33) DEFAULT NULL,  `ean5` bigint(33) DEFAULT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;";
+
+    //public static String insertBaseLekiLock="LOCK TABLES `leki` WRITE;";
+    public static String insertBaseLeki="INSERT INTO `leki` VALUES (1,'0,9% Sodium Chloride',5909990875450,5909990875436,5909991292942,5909990875474,5909990875467),(2,'1% Spirytusowy roztw',5909990316724,5909990316779,5907626706437,0,0),(3,'1% Wodny roztwór fio',5909990316922,5909990316977,0,0,0),(4,'10% Dekstran 40 000 ',5909991041410,5909991041427,0,0,0),(5,'10% Dekstran 40 000 ',5909990212729,5909990212712,0,0,0),(6,'11C-cholina',5909991286194,0,0,0,0),(7,'2% Spirytusowy roztw',5909990316823,0,0,0,0),(8,'2% Wodny roztwór fio',5909990317028,0,0,0,0),(10,'5-Fluorouracil-Ebewe',5909990450619,5909990450626,0,5909990336258,5909990450657),(11,'6% Dekstran 70 000 B',5909991041526,0,0,0,0),(12,'99Tc - Tektrotyd',5909991166410,0,0,0,0),(13,'Abacavir + Lamivudin',5909991292911,5909991292928,0,5909991292935,0),(14,'Abacavir + Lamivudin',5907626706420,5907626706451,0,5907626706444,0),(15,'Abacavir + Lamivudin',5909991353698,0,0,0,0),(16,'Abacavir Sandoz',5909991282752,5909991282769,0,0,0),(17,'Zyx',5909990765034,0,0,0,0),(18,'0,9% Sodium Chloride',5909990875450,5909990875436,5909991292942,5909990875474,5909990875467),(19,'1% Spirytusowy roztw',5909990316724,5909990316779,5907626706437,0,0),(20,'1% Wodny roztwór fio',5909990316922,5909990316977,0,0,0),(21,'10% Dekstran 40 000 ',5909991041410,5909991041427,0,0,0),(22,'10% Dekstran 40 000 ',5909990212729,5909990212712,0,0,0),(23,'11C-cholina',5909991286194,0,0,0,0),(24,'2% Spirytusowy roztw',5909990316823,0,0,0,0),(25,'2% Wodny roztwór fio',5909990317028,0,0,0,0),(26,'Test',55280119911,0,0,0,0),(27,'6% Dekstran 70 000 B',5909991041526,0,0,0,0),(28,'99Tc - Tektrotyd',5909991166410,0,0,0,0),(29,'Abacavir + Lamivudin',5909991292911,5909991292928,0,5909991292935,0),(30,'Abacavir + Lamivudin',5907626706420,5907626706451,0,5907626706444,0),(31,'Abacavir + Lamivudin',5909991353698,0,0,0,0),(32,'Abacavir Sandoz',5909991282752,5909991282769,0,0,0),(33,'Zyx',5909990765034,0,0,0,0),(34,'0,9% Sodium Chloride',5909990875450,5909990875436,5909991292942,5909990875474,5909990875467),(35,'1% Spirytusowy roztw',5909990316724,5909990316779,5907626706437,0,0),(36,'1% Wodny roztwór fio',5909990316922,5909990316977,0,0,0),(37,'10% Dekstran 40 000 ',5909991041410,5909991041427,0,0,0),(38,'10% Dekstran 40 000 ',5909990212729,5909990212712,0,0,0),(39,'11C-cholina',5909991286194,0,0,0,0),(40,'2% Spirytusowy roztw',5909990316823,0,0,0,0),(41,'2% Wodny roztwór fio',5909990317028,0,0,0,0),(42,'5-Fluorouracil-Ebewe',5909990450619,5909990450626,0,5909990336258,5909990450657),(43,'6% Dekstran 70 000 B',5909991041526,0,0,0,0),(44,'99Tc - Tektrotyd',5909991166410,0,0,0,0),(45,'Abacavir + Lamivudin',5909991292911,5909991292928,0,5909991292935,0),(46,'Abacavir + Lamivudin',5907626706420,5907626706451,0,5907626706444,0),(47,'Abacavir + Lamivudin',5909991353698,0,0,0,0),(48,'Abacavir Sandoz',5909991282752,5909991282769,0,0,0),(49,'Zyx',5909990765034,0,0,0,0);";
+   // public static String insertBaseLekiUnlock="UNLOCK TABLES;";
+
+
+
+
+    public static String createBaseUserLeki="DROP TABLE IF EXISTS `userleki`;";
+    public static String createBaseUserLeki2="CREATE TABLE `userleki` (`pid` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(20) DEFAULT NULL,  `ean` bigint(13) DEFAULT NULL,  `expireDate` varchar(13) DEFAULT NULL,  PRIMARY KEY (`pid`)) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1";
+    //public static String dumpBase="mysqldump -u root -p --database projektMed > projekt.sql";
+
+
+}

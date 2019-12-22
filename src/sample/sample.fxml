@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="700.0" prefWidth="1300.0" stylesheets="@css.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.162" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1300.0">
+         <children>
+
+            
+            <Pane fx:id="paneListView" layoutX="23.0" layoutY="90.0" prefHeight="596.0" prefWidth="549.0">
+            <ListView fx:id="listView" layoutX="14.0" layoutY="101.0" prefHeight="481.0" prefWidth="493.0" />
+               <Label layoutX="211.0" layoutY="45.0" text="Baza Leków">
+                  <font>
+                     <Font size="25.0" />
+                  </font>
+               </Label>
+            </Pane>
+            <Pane fx:id="panedodawanie" layoutX="571.0" layoutY="90.0" prefHeight="259.0" prefWidth="649.0">
+               <children>
+                  <Button fx:id="buttonaddprod" layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#unlockAdd" text="Chce dodać produkt">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <TextField fx:id="textfieldeanadd" layoutX="24.0" layoutY="64.0" promptText="Kod ean">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <TextField fx:id="textfieldnamedd" layoutX="281.0" layoutY="64.0" promptText="Nazwa">
+                     <font>
+                        <Font size="20.0" />
+                     </font></TextField>
+                  <Button fx:id="buttonfinaladd" layoutX="534.0" layoutY="64.0" mnemonicParsing="false" onAction="#add" text="Dodaj">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttonfinaldel" layoutX="281.0" layoutY="164.0" mnemonicParsing="false" onAction="#del" text="Usuń">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <TextField fx:id="textFieldDel" layoutX="24.0" layoutY="164.0" promptText="Kod ean">
+                     <font>
+                        <Font size="20.0" />
+                     </font></TextField>
+                  <Button fx:id="buttondelprod" layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#unlockDel" text="Chce usunąc produkt">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label fx:id="labelnUsun" layoutX="24.0" layoutY="208.0" text="Wskaź na produkt na liście i kliknij Usuń">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="paneopcje" layoutX="585.0" layoutY="361.0" prefHeight="327.0" prefWidth="635.0">
+               <children>
+                  <Button fx:id="buttonkopiazapasowa" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetUserBase" prefHeight="150.0" prefWidth="281.0" text="Zresetuj swoją bazę leków">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttondomyslna" layoutX="332.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetBase" prefHeight="150.0" prefWidth="281.0" text="Zresetuj ogólną bazę leków">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttonczyscbaze" layoutX="332.0" layoutY="165.0" mnemonicParsing="false" onAction="#aboutAouthor" prefHeight="150.0" prefWidth="281.0" text="O autorze">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttonhelp" layoutX="20.0" layoutY="165.0" mnemonicParsing="false" onAction="#help" prefHeight="150.0" prefWidth="281.0" text="Pomoc">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+            <Label layoutX="421.0" layoutY="21.0" text="System zarzadzania bazą leków">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
