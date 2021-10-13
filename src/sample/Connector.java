@@ -8,22 +8,20 @@ import java.util.List;
 
 public class Connector {
 
-    public Connector(){
+    public Connector() {
         connectorMySql();
         //createTables();
     }
 
-
-
     public static final String DRIVER = "com.mysql.jdbc.Driver";
-    String serverName="127.0.0.1";//"localhost";
-    String mydatabase="projektMed";
-    public final String DB_URL = "jdbc:mysql://"+serverName+"/"+mydatabase+"?user=root";
+    String serverName = "127.0.0.1";
+    String mydatabase = "MedicineStorage";
+    public final String DB_URL = "jdbc:mysql://" + serverName + "/" + mydatabase + "?user=root";
     private Connection conn;
     private Statement stat;
 
     //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-    public boolean connectorMySql(){
+    public boolean connectorMySql() {
         try {
             Class.forName(Connector.DRIVER);
         } catch (ClassNotFoundException e) {
@@ -69,10 +67,10 @@ public class Connector {
     }
     //■■■■■■■■■■■■■■■INSERT■■■■■■■■■■■■■■■■■■■■■■■
 
-    public boolean insertLeki(String name, String ean1) {
+    public boolean insertMedication(String name, String ean1) {
         try {
             PreparedStatement prepStmt = conn.prepareStatement(
-                    "insert into leki values (NULL, ?, ?,0,0,0,0);");
+                    "insert into medication values (NULL, ?, ?,0,0,0,0);");
             prepStmt.setString(1, name);
             prepStmt.setString(2, ean1);
             prepStmt.execute();
@@ -85,10 +83,10 @@ public class Connector {
     }
     //■■■■■■■■■■■■■■■DELETE■■■■■■■■■■■■■■■■■■■■■■■
 
-    public boolean deleteLeki(String ean1) {
+    public boolean deleteMedication(String ean1) {
         try {
             PreparedStatement prepStmt = conn.prepareStatement(
-                    "DELETE FROM leki WHERE ean1 = ?;");
+                    "DELETE FROM medication WHERE ean1 = ?;");
             prepStmt.setString(1, ean1);
             prepStmt.execute();
         } catch (SQLException e) {
@@ -100,12 +98,12 @@ public class Connector {
     }
 
     //■■■■■■■■■■■■■■■■■■SELECT■■■■■■■■■■■■■■■■■■■■
-    public List<Leki> selectLeki() {
-        List<Leki> usersLeki = new LinkedList<Leki>();
+    public List<Medication> selectMedication() {
+        List<Medication> usersMedication = new LinkedList<Medication>();
         try {
-            ResultSet result = stat.executeQuery("SELECT * FROM Leki");
+            ResultSet result = stat.executeQuery("SELECT * FROM medication");
             int id;
-            String name,ean1,ean2,ean3,ean4,ean5;
+            String name, ean1, ean2, ean3, ean4, ean5;
             while (result.next()) {
                 id = result.getInt("id");
                 name = result.getString("name");
@@ -115,13 +113,13 @@ public class Connector {
                 ean4 = result.getString("ean4");
                 ean5 = result.getString("ean5");
 
-                usersLeki.add(new Leki(id, name, ean1, ean2,ean3,ean4,ean5));
+                usersMedication.add(new Medication(id, name, ean1, ean2, ean3, ean4, ean5));
             }
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
-        return usersLeki;
+        return usersMedication;
     }
 
     //■■■■■■■■■■■■■■■Execute SQL■■■■■■■■■■■■■■■■■■■■■■■
@@ -131,7 +129,7 @@ public class Connector {
             PreparedStatement prepStmt = conn.prepareStatement(sql);
             prepStmt.execute();
         } catch (SQLException e) {
-            System.err.println("Execute statment error");
+            System.err.println("Execute statement error");
             e.printStackTrace();
             return false;
         }

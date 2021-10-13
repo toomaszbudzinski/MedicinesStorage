@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class MD5 {
-    public static String createMD5(String password){
+    public static String createMD5(String password) {
 
         MessageDigest md = null;
         try {
@@ -22,9 +22,9 @@ public class MD5 {
         }
 
         StringBuffer hexString = new StringBuffer();
-        for (int i=0;i<byteData.length;i++) {
-            String hex=Integer.toHexString(0xff & byteData[i]);
-            if(hex.length()==1) hexString.append('0');
+        for (int i = 0; i < byteData.length; i++) {
+            String hex = Integer.toHexString(0xff & byteData[i]);
+            if (hex.length() == 1) hexString.append('0');
             hexString.append(hex);
         }
 

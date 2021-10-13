@@ -1,6 +1,6 @@
 package sample;
 
-public class Leki {
+public class Medication {
 
 
     private int id;
@@ -12,7 +12,7 @@ public class Leki {
     private String ean5;
 
 
-    public Leki(int id, String name, String ean1, String ean2, String ean3, String ean4, String ean5) {
+    public Medication(int id, String name, String ean1, String ean2, String ean3, String ean4, String ean5) {
         this.id = id;
         this.name = name;
         this.ean1 = ean1;

@@ -1,35 +1,32 @@
-
-
 #paneListView{
     -fx-background-color: #8fbc8f;
     -fx-border-color: #2e8b57;
     -fx-border-width: 1px;
-
 }
 
-#paneopcje{
+#paneoptions{
     -fx-background-color: #8ccc8f;
     -fx-border-color: #2e8b57;
     -fx-border-width: 1px;
 }
 
-#panedodawanie{
+#paneadd{
     -fx-background-color: #8fbc8f;
     -fx-border-color: #2e8b57;
     -fx-border-width: 1px;
 }
 
-#buttonkopiazapasowa{
+#buttonbackup{
      -fx-background-radius: 10;
         -fx-background-insets: 5 10 5 10;
-   }
+}
 
-#buttondomyslna{
+#buttondefault{
     -fx-background-radius: 10;
     -fx-background-insets: 5 10 5 10;
 }
 
-#buttonczyscbaze{
+#buttonclear{
      -fx-background-radius: 10;
         -fx-background-insets: 5 10 5 10;
 }
